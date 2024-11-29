@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discussion App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Left Pane -->
+    <div class="left-pane">
+      <button id="new-question-btn">New Question Form</button>
+      <input type="text" id="search-bar" placeholder="Search questions..." />
+      <div id="question-list" class="question-list"></div>
+    </div>
+
+    <!-- Right Pane -->
+    <div class="right-pane">
+      <div id="question-form">
+        <h2>Ask a New Question</h2>
+        <form id="new-question-form">
+          <label for="title">Title:</label>
+          <input type="text" id="title" required />
+          <label for="question">Question:</label>
+          <textarea id="question" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <div id="question-details" class="hidden">
+        <h2 id="question-title"></h2>
+        <p id="question-content"></p>
+        <button id="resolve-btn">Resolve</button>
+        <h3>Responses</h3>
+        <div id="response-list"></div>
+        <form id="response-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" required />
+          <label for="comment">Comment:</label>
+          <textarea id="comment" required></textarea>
+          <button type="submit">Submit Response</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
